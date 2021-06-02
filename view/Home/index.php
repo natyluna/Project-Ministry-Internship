@@ -2,7 +2,6 @@
 
 include('view/layout/header.php');
 
-echo 'index 2';
 ?>
 
 

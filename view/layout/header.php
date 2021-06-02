@@ -26,9 +26,9 @@
 
 
 </head>
-<body>
+<body class="color-backgray">
 
-<div class="container bg-black-50">
+<div class="container">
 
     <div class="d-flex align-items-center p-3 my-3 text-white rounded shadow-sm color-bluecat">
     
