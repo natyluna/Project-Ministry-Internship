@@ -21,20 +21,28 @@
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/666a511cb5.js" crossorigin="anonymous"></script>
 
+    <!-- OUR STYLE -->
+    <link rel="stylesheet" href="view/assets/css/style.css">
+
 
 </head>
 <body>
 
-<div class="container">
+<div class="container bg-black-50">
 
-    <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
+    <div class="d-flex align-items-center p-3 my-3 text-white rounded shadow-sm color-bluecat">
     
-        <img class="me-3" src="/docs/5.0/assets/brand/bootstrap-logo-white.svg" alt="" width="48" height="38">
+        <img class="me-3" src="https://i0.wp.com/www.turismo.catamarca.gob.ar/wp-content/uploads/2020/01/cropped-logo-turismo-c.png?zoom=2.625&resize=382%2C382&ssl=1" alt="" width="48" height="48">
         <div class="lh-1">
-           <h1 class="h6 mb-0 text-white lh-1">Bootstrap</h1>
-           <small>Since 2011</small>
+           <h1 class="h5 mb-0 text-white lh-1">Ministerio de Modernizacion</h1>
+           <small>Tuy Software</small>
         </div>
 
+    </div>
+
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+    
+    
     </div>
 
 </div>

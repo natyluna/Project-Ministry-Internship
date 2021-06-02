@@ -1,7 +1,6 @@
 <?php 
 
-include('view/Home/index.php');
+include('view/home/index.php');
 
-echo 'index 1';
 
 ?>

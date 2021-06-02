@@ -1,6 +1,6 @@
 <?php 
 
-include('../layout/header.php');
+include('view/layout/header.php');
 
 echo 'index 2';
 ?>
@@ -18,6 +18,6 @@ echo 'index 2';
 
 <?php 
 
-include('../layout/footer.php');
+include('view/layout/footer.php');
 
 ?>
