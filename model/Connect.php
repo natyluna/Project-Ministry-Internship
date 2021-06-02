@@ -15,5 +15,7 @@
 
     echo $mysqli->host_info . "\n";
 
+    //OTRO CULIAO QUE NO ME SALEEEEE LPTM
+
 
 ?>
