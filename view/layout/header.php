@@ -24,8 +24,8 @@
     
         <img class="me-3" src="view/assets/img/princicon.png" alt="" width="48" height="48">
         <div class="lh-1">
-           <h1 class="h5 mb-0 text-white lh-1 animate__animated animate__headShake">Ministerio de Modernizacion</h1>
-           <h6 class="animate__animated animate__headShake">Tuy Software</h6>
+           <h1 class="h5 mb-0 text-white lh-1 animate__animated animate__headShake">Ministerios y Tramites</h1>
+           <h6 class="animate__animated animate__headShake">Gobierno de Catamarca</h6>
         </div>
 
     </div>
