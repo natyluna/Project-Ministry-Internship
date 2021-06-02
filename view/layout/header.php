@@ -24,6 +24,13 @@
     <!-- OUR STYLE -->
     <link rel="stylesheet" href="view/assets/css/style.css">
 
+    <!-- ANIMACIONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- LATO DE GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
 
 </head>
 <body class="color-backgray">
@@ -32,17 +39,12 @@
 
     <div class="d-flex align-items-center p-3 my-3 text-white rounded shadow-sm color-bluecat">
     
-        <img class="me-3" src="https://i0.wp.com/www.turismo.catamarca.gob.ar/wp-content/uploads/2020/01/cropped-logo-turismo-c.png?zoom=2.625&resize=382%2C382&ssl=1" alt="" width="48" height="48">
+        <img class="me-3" src="view/assets/img/princicon.png" alt="" width="48" height="48">
         <div class="lh-1">
-           <h1 class="h5 mb-0 text-white lh-1">Ministerio de Modernizacion</h1>
-           <small>Tuy Software</small>
+           <h1 class="h5 mb-0 text-white lh-1 animate__animated animate__headShake">Ministerio de Modernizacion</h1>
+           <h6 class="animate__animated animate__headShake">Tuy Software</h6>
         </div>
 
-    </div>
-
-    <div class="my-3 p-3 bg-body rounded shadow-sm">
-    
-    
     </div>
 
 </div>
