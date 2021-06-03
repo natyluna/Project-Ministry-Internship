@@ -1,65 +1,61 @@
-    /* COLORES PROPIOS */
-    
-    * {
-        font-family: 'Lato', sans-serif;
-    }
-    
-    .bg-backblack {
-        color: rgba();
-        ;
-    }
-    
-    .color-bluecat {
-        background-color: #4F9EC8;
-    }
-    
-    .color-backgray {
-        background-color: #eeeeee;
-    }
-    
-    .tarje-main {
-        max-height: 508px;
-        max-width: 404px;
-        min-height: 450px;
-        min-width: 120px;
-    }
-    
-    .tarje-regcivil {
-        background-image: url("../img/regicon.jpg");
-    }
-    
-    .tarje-regcivil:hover {
-        background-image: url("../img/regiconh.jpg");
-    }
-    
-    .tarje-segminis {
-        background-image: url("../img/segicon.jpg");
-    }
-    
-    .tarje-segminis:hover {
-        background-image: url("../img/segiconh.jpg");
-    }
-    
-    .tarje-salminis {
-        background-image: url("../img/salicon.jpg");
-    }
-    
-    .tarje-salminis:hover {
-        background-image: url("../img/saliconh.jpg");
-    }
-    
-    .body-login {
-        margin: 0;
-        padding: 0;
-        background-color: #eeeeee;
-        height: 100vh;
-    }
-    
-    #login .container #login-row #login-column #login-box {
-        margin-top: 200px;
-        max-width: 600px;
-        height: 320px;
-        border: 1px solid #9C9C9C;
-        border-radius: 10px;
-        background-color: #4F9EC8;
-    }
+
+/* COLORES PROPIOS */
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.font-bebas {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.bg-backblack {
+    color: rgba();;
+}
+
+.color-bluecat {
+    background-color: #4F9EC8;
+}
+
+.color-bluecat-op {
+    background-color: #4f9ec8ee;
+}
+
+.color-backgray {
+    background-color: #eeeeee;
+}
+
+.color-greensuc {
+    background-color: #198754;
+}
+
+.tarje-main {
+    max-height: 508px;
+    max-width: 404px;
+
+    min-height: 450px;
+    min-width: 120px;
+}
+
+.tarje-regcivil {
+    background-image: url("../img/regicon.jpg");   
+}
+
+.tarje-regcivil:hover {
+    background-image: url("../img/regiconh.jpg");
+}
+
+.tarje-segminis {
+    background-image: url("../img/segicon.jpg");
+}
+
+.tarje-segminis:hover {
+    background-image: url("../img/segiconh.jpg");
+}
+
+.tarje-salminis {
+    background-image: url("../img/salicon.jpg");
+}
+
+.tarje-salminis:hover {
+    background-image: url("../img/saliconh.jpg");
+}
