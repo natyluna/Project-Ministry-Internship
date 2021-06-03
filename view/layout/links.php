@@ -6,7 +6,7 @@
     <script src="https://kit.fontawesome.com/666a511cb5.js" crossorigin="anonymous"></script>
 
     <!-- OUR STYLE -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="view/assets/css/style.css">
 
     <!-- ANIMACIONES -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
