@@ -1,8 +1,11 @@
 
-
 /* COLORES PROPIOS */
 * {
     font-family: 'Lato', sans-serif;
+}
+
+.font-bebas {
+    font-family: 'Bebas Neue', cursive;
 }
 
 .bg-backblack {
@@ -13,8 +16,16 @@
     background-color: #4F9EC8;
 }
 
+.color-bluecat-op {
+    background-color: #4f9ec8ee;
+}
+
 .color-backgray {
     background-color: #eeeeee;
+}
+
+.color-greensuc {
+    background-color: #198754;
 }
 
 .tarje-main {
