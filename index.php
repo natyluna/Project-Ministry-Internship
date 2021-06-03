@@ -1,6 +1,10 @@
 <?php 
+include_once './model/Connect.php';
+$objeto = new Conexion();
+$conexion = $objeto->Conectar();
 
-include('view/home/index.php');
+print_r($conexion);
 
+echo "PRUEBA"
 
 ?>
