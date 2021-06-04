@@ -1,8 +1,3 @@
-<?php 
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +8,7 @@
 
     <!-- TITULO DE LA PAG. -->
     <title>Document</title>
-    <?php include('links.php'); ?>
-
+    <?php include(links); ?>
 </head>
 <body class="color-backgray">
 

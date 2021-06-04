@@ -1,7 +1,5 @@
 <?php 
-
-include('view/layout/header.php');
-
+include(header);
 ?>
 
 <div class="container">
@@ -10,7 +8,7 @@ include('view/layout/header.php');
     
         <div class="col d-flex align-items-center">
 
-            <img class="me-3" src="view/assets/img/princicon.png" alt="" width="48" height="48">
+            <img class="me-3" src="<?php echo img?>princicon.png" alt="" width="48" height="48">
             <div class="lh-1">
                 <h1 class="h5 mb-0 text-white lh-1 animate__animated animate__headShake">Ministerios y Tramites</h1>
                 <h6 class="animate__animated animate__headShake">Gobierno de Catamarca</h6>
@@ -39,17 +37,17 @@ include('view/layout/header.php');
     </div>
     <div class="carousel-inner rounded">
         <div class="carousel-item active" data-bs-interval="10000">
-        <img src="view/assets/img/banners/uno.jpg" class="d-block w-100" alt="...">
+        <img src="<?php echo img?>banners/uno.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
         </div>
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-        <img src="view/assets/img/banners/dos.jpg" class="d-block w-100" alt="...">
+        <img src="<?php echo img?>banners/dos.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
         </div>
         </div>
         <div class="carousel-item">
-        <img src="view/assets/img/banners/tres.jpg" class="d-block w-100" alt="...">
+        <img src="<?php echo img?>banners/tres.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
         </div>
         </div>
@@ -128,82 +126,12 @@ include('view/layout/header.php');
     
     </div>
 
-    <footer class="bg-light text-center text-lg-start">
-    <!-- Grid container -->
-    <div class="container p-4">
-        <!--Grid row-->
-        <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Contactos</h5>
-
-                    <!-- Facebook -->
-            <a
-                class="btn btn-link btn-floating btn-lg text-dark m-1"
-                href="#!"
-                role="button"
-                data-mdb-ripple-color="dark"
-                ><i class="fab fa-facebook-f"></i></a>
-
-                    <!-- Twitter -->
-            <a
-                class="btn btn-link btn-floating btn-lg text-dark m-1"
-                href="#!"
-                role="button"
-                data-mdb-ripple-color="dark"
-                ><i class="fab fa-twitter"></i></a>
-
-                    <!-- Google -->
-            <a
-                class="btn btn-link btn-floating btn-lg text-dark m-1"
-                href="#!"
-                role="button"
-                data-mdb-ripple-color="dark"
-                ><i class="fab fa-google"></i></a>
-
-                    <!-- Instagram -->
-            <a
-                class="btn btn-link btn-floating btn-lg text-dark m-1"
-                href="#!"
-                role="button"
-                data-mdb-ripple-color="dark"
-                ><i class="fab fa-instagram"></i></a>
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase">LINEA DIRECTA!</h5>
-
-            <p>TELEFONO: +54 383 400-0000</p>
-            <p>DIRECCION: CASA DE GOBIERNO</p>
-        </div>
-        <!--Grid column-->
-        </div>
-        <!--Grid row-->
-    </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2021 Derechos de Autor @
-        <a class="text-dark" href="#">Tuy Software</a>
-    </div>
-    <!-- Copyright -->
-    </footer>
+    
 
 </div>
 
-
-
-
-
-
-
-
 <?php 
 
-include('view/layout/footer.php');
+include(footer);
 
 ?>
