@@ -22,7 +22,7 @@
         }
         protected function getContentTemplate($file_name){
             $file_path = ROOT .'/'.PATH_VIEWS ."$file_name/$file_name".'.php';
-            $file_path = "C:/xampp/htdocs/Project-Ministry-Internship/app/views/Home/login.php";
+            //$file_path = "C:/xampp/htdocs/Project-Ministry-Internship/app/views/Home/login.php"; Prueba de login
             try {
                 if(is_file($file_path)){
                     extract($this->params);// Extrae todos los valores del arreglo params y los coloca como una variable
