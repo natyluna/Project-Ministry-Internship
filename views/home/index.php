@@ -1,7 +1,3 @@
-<?php 
-include(header);
-?>
-
 <div class="container">
 
     <div class="d-flex align-items-center p-3 my-3 text-white rounded shadow-sm color-bluecat">
@@ -17,7 +13,7 @@ include(header);
         </div>
         
         <div class="col d-flex align-items-center flex-row-reverse">
-            <a href="" class="btn btn-primary">Iniciar Sesion</a>
+            <a href="" class="btn btn-success">Iniciar Sesion</a>
         </div>
        
 
@@ -62,7 +58,9 @@ include(header);
     </button>
     </div>
 
+    <div class="my-3 p-5 bg-body rounded-3 shadow-sm">
 
+    </div>
 
 
     <div class="my-3 p-5 bg-body rounded-3 shadow-sm">
@@ -126,12 +124,11 @@ include(header);
     
     </div>
 
+
+
+    <div class="my-3 p-5 bg-body rounded-3 shadow-sm">
+
+    </div>
     
 
 </div>
-
-<?php 
-
-include(footer);
-
-?>

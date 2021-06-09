@@ -1,9 +1,5 @@
-#Permite reescribir las peticiones de URL
 RewriteEngine On
-
 #Si el archivo y la carpeta no exiten hacer lo siguiente
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
-#Redirecciona todas las petiones a index
-RewriteRule ^ index.php [QSA,L]
+RewriteRule ^(.*)$([a-zA-Z0-9\-\_\/]*)$ index.php?p=$1

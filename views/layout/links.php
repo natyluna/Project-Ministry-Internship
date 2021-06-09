@@ -7,6 +7,8 @@
 
     <!-- OUR STYLE -->
     <link rel="stylesheet" href=<?php echo css?>>
+    <link rel="stylesheet" href=<?php echo cssCustom?>>
+
 
     <!-- ANIMACIONES -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
