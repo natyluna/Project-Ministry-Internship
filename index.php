@@ -7,13 +7,12 @@ require_once('./config/Config.php');
 require_once(ROOT.'system/Core/Controller.php');
 
 // Separamos los parámetros y los colocamos en el array  $params
-if($_GET['p']){
+if(isset($_GET['p'])){
    $params = explode('/', $_GET['p']);
-
 }
 
 // Si existe un parametro
-if($params[0] != ""){
+if(isset($params[0])){
     // Guardamos el primer parámetro en $controller poniendo su primera letra en mayúsculas (ucfirst)
     $controller = ucfirst($params[0]);
 

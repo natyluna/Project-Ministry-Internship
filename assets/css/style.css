@@ -25,6 +25,17 @@
     background-color: #eeeeee;
 }
 
+.color-backgray-anim {
+    background-color: #f8f8f8;
+    color: #4F9EC8;
+}
+
+.color-backgray-anim:hover {
+    background-color: #cee5ff;
+    border-color: #2479a7;
+    color: #ffffff;
+}
+
 .color-greensuc {
     background-color: #198754;
 }

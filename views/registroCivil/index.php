@@ -17,24 +17,96 @@
 
     <div class="my-3 p-5 bg-body rounded-3 shadow-sm">
 
+        <!-- MENU PRINCIPAL -->
         <div class="row">
 
-            <div class="col">
+            <div class="col-12">
+
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-backgray-anim" href="#">Personas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-backgray-anim" href="#">Tramites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-backgray-anim" href="#">Cuenta</a>
+                    </li>
+                </ul>
+                <br>
+
+            </div>
+
+
+        </div>
+
+         <!-- BANNER Y NOTIFICACIONES -->
+        <div class="row">
+
+            <div class="col ">
+
+                <div class="regimag">
+
+                </div>
+
             </div>
             <div class="col-4">
 
                 <div class="card">
 
-                    <h5 class="card-header bg-danger text-white"><i class="fas fa-exclamation-circle"></i> Atencion</h5>
+                    <h5 class="card-header bg-danger text-white "><i class="fas fa-exclamation-circle"></i> Atencion</h5>
                     <div class="card-body">
                         <h5 class="card-title">Corroborá tus datos!</h5>
                         <p class="card-text">Necesitamos que ingreses tus datos y corrobores que todo esté bien</p>
                         <a href="#" class="btn btn-warning text-white">Chequear Datos</a>
+
                     </div>
                 </div>
 
             </div>
 
+        </div>
+        <br>
+
+         <!-- TARJETAS DE OPCIONES -->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                <div class="card-body">
+                    <div class="card-header color-bluecat-op text-white">
+                        <h5 class="text-center align-center">Tarjeta 1</h5>
+                    </div>
+                    
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio commodi quas impedit vitae eaque reprehenderit eius ut et.</p>
+                    <a href="#" class="btn btn-info text-white col-12">Boton Activo 1</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                <div class="card-body">
+                    <div class="card-header color-bluecat-op text-white">
+                        <h5 class="text-center align-center">Tarjeta 2</h5>
+                    </div>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio commodi quas impedit vitae eaque reprehenderit eius ut et.</p>
+                    <a href="#" class="btn btn-info text-white col-12">Boton Activo 2</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                <div class="card-body">
+                    <div class="card-header color-bluecat-op text-white">
+                        <h5 class="text-center align-center">Tarjeta 3</h5>
+                    </div>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio commodi quas impedit vitae eaque reprehenderit eius ut et.</p>
+                    <a href="#" class="btn btn-info text-white col-12">Boton Activo 3</a>
+                </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
