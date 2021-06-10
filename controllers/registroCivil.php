@@ -6,6 +6,11 @@ class RegistroCivil extends Controller{
         $this->render('index');
     }
 
+
+    public function crud(){
+        $this->render('crud');
+    }
+
 }
 
 ?>
