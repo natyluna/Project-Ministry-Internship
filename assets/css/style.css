@@ -10,7 +10,7 @@
 
 .bg-backblack {
     color: rgba();
-    ;
+    
 }
 
 .color-bluecat {
@@ -91,7 +91,7 @@
     margin-bottom: 50px;
     padding: 0 30px 0 30px;
     max-width: 620px;
-    height: 850px;
+    height: 950px;
     border: 1px solid #9C9C9C;
     border-radius: 10px;
     background-color: #4F9EC8;
@@ -101,16 +101,7 @@
 }
 
 
-/* crud */
-
-.search-box {
-    position: relative;
-    float: right;
-}
-
-.search-box input {
-    height: 34px;
-    border-radius: 20px;
-    padding-left: 35px;
-    box-shadow: none;
+/*----PARTIDAS-----*/
+.hide{
+    display: none;
 }
