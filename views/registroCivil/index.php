@@ -20,7 +20,7 @@
                     <div class="row g-3 ">
                         <div class="col-sm-6">
                             <label for="nombre" name="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" name="nombre" placeholder="ej:Juan" required>
+                            <input type="text" class="form-control" name="nombre" placeholder="ej: Juan" required>
                             <div class="invalid-feedback">
                                 Campo obligatorio
                             </div>
@@ -28,7 +28,7 @@
 
                         <div class="col-sm-6">
                             <label for="apellido" class="form-label">Apellido</label>
-                            <input type="text" class="form-control" name="apellido" placeholder="ej:Álvarez" required>
+                            <input type="text" class="form-control" name="apellido" placeholder="ej: Álvarez" required>
                             <div class="invalid-feedback">
                                 Campo obligatorio
                             </div>
