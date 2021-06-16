@@ -1,97 +1,92 @@
+<?php
 
-<?php 
+include('config/config.php');
+$ministerio = "Ministerio de educación";
+include(header);
 
-    include('config/config.php');
-    $ministerio="Ministerio de educación"; 
-    include(header);
-
-    if(isset($_GET['minis'])){
-        echo $_GET['minis'];
-        $ministerio = $_GET['minis'];
-    } else {
-        echo 'No hay GET';
-    }
+if (isset($_GET['minis'])) {
+    echo $_GET['minis'];
+    $ministerio = $_GET['minis'];
+} else {
+    echo 'No hay GET';
+}
 
 ?>
 
-    <div class="container">
+<div class="container">
 
-        <div class="d-flex align-items-center p-3 my-3 text-white rounded shadow-sm color-bluecat">
-        
-            <div class="col d-flex align-items-center">
+    <div class="d-flex align-items-center p-3 my-3 text-white rounded shadow-sm color-bluecat">
 
-                <img class="me-3" src="<?php echo img?>princicon.png" alt="" width="48" height="48">
-                <div class="lh-1">
-                    <h1 class="h5 mb-0 text-white lh-1 animate__animated animate__headShake">Ministerios y Tramites</h1>
-                    <h6 class="animate__animated animate__headShake">Gobierno de Catamarca</h6>
-                </div>
+        <div class="col d-flex align-items-center">
 
+            <img class="me-3" src="<?php echo img ?>princicon.png" alt="" width="48" height="48">
+            <div class="lh-1">
+                <h1 class="h5 mb-0 text-white lh-1 animate__animated animate__headShake">Ministerios y Tramites</h1>
+                <h6 class="animate__animated animate__headShake">Gobierno de Catamarca</h6>
             </div>
 
         </div>
 
     </div>
-    
-    <br>
-    <br>
-    <br>
 
-    <div class="container">
+</div>
 
-        <div class="row">
+<br>
+<br>
+<br>
 
-            <div class="col">
+<div class="container">
 
-                <div class="login-form">
-                    <form action="/examples/actions/confirmation.php" method="post">
-                        
-                        <h2 class="text-center"><?php echo $ministerio ?></h2>	
-                        <div class="form-group">
-                            <input type="number" class="form-control p-1" placeholder="DNI" required="required">
-                            
-                            <input type="password" class="form-control p-1" placeholder="Clave" required="required">
-                        </div>
-                        <br>
-                        <button type="submit" class="btn btn-secondary col-12">Iniciar Sesion</button>
-                        
-                        
-                        <p class="text-center"><a href="#">Olvidaste tu Contraseña?</a></p>     
-                    </form>
-                    <p class="text-center small">No tenes Clave? <a href="register.php">Registrate</a></p>
+    <div class="row">
 
-                    <?php
-                    
+        <div class="col">
 
-                        
+            <div class="login-form">
+                <form action="/examples/actions/confirmation.php" method="post">
 
-                    ?>
-                </div>
+                    <h2 class="text-center"><?php echo $ministerio ?></h2>
+                    <div class="form-group">
+                        <input type="number" class="form-control p-1" placeholder="DNI" required="required">
+
+                        <input type="password" class="form-control p-1" placeholder="Clave" required="required">
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-secondary col-12">Iniciar Sesion</button>
+
+
+                    <p class="text-center"><a href="#">Olvidaste tu Contraseña?</a></p>
+                </form>
+                <p class="text-center small">No tenes Clave? <a href="registrarPersona.php">Registrate</a></p>
 
             </div>
 
-            <div class="col">
+        </div>
 
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('<?php echo img?>loginbg2.jpg');">
-                
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        
-                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">VIVE, SIENTE, RECORRE</h2>
-                        <ul class="d-flex list-unstyled mt-auto">
+        <div class="col">
+
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('<?php echo img ?>loginbg2.jpg');">
+
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+
+                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">VIVE, SIENTE, RECORRE</h2>
+                    <ul class="d-flex list-unstyled mt-auto">
                         <li class="me-auto">
-                            <img src="<?php echo img?>princicon.png" alt="Bootstrap" width="32" height="32" class="rounded-circle">    
+                            <img src="<?php echo img ?>princicon.png" alt="Bootstrap" width="32" height="32" class="rounded-circle">
                         </li>
                         <li class="d-flex align-items-center me-3">
-                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                            <svg class="bi me-2" width="1em" height="1em">
+                                <use xlink:href="#geo-fill"></use>
+                            </svg>
                             <small>Catamarca, Valle Viejo</small>
                         </li>
                         <li class="d-flex align-items-center">
-                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                            <svg class="bi me-2" width="1em" height="1em">
+                                <use xlink:href="#calendar3"></use>
+                            </svg>
                             <small>Cuesta del Portezuelo</small>
                         </li>
-                        </ul>
+                    </ul>
 
-                    </div>
-                    
                 </div>
 
             </div>
@@ -99,6 +94,8 @@
         </div>
 
     </div>
+
+</div>
 
 
 <!-- /*

@@ -1,4 +1,7 @@
+<?php include('config/config.php');
+include(header); 
 
+?>
 
 <div class="container">
 
@@ -44,9 +47,9 @@
 
 
         </div>
-        
 
-         <!-- BANNER Y NOTIFICACIONES -->
+
+        <!-- BANNER Y NOTIFICACIONES -->
         <div class="row">
 
             <div class="col ">
@@ -74,42 +77,44 @@
         </div>
         <br>
 
-         <!-- TARJETAS DE OPCIONES -->
+        <!-- TARJETAS DE OPCIONES -->
         <div class="row">
             <div class="col-sm-4">
                 <div class="card">
-                <div class="card-body">
-                    <div class="card-header color-bluecat-op text-white">
-                        <h5 class="text-center align-center">Tarjeta 1</h5>
+                    <div class="card-body">
+                        <div class="card-header color-bluecat-op text-white">
+                            <h5 class="text-center align-center">Tarjeta 1</h5>
+                        </div>
+
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio commodi quas impedit vitae eaque reprehenderit eius ut et.</p>
+                        <a href="#" class="btn btn-info text-white col-12">Boton Activo 1</a>
                     </div>
-                    
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio commodi quas impedit vitae eaque reprehenderit eius ut et.</p>
-                    <a href="#" class="btn btn-info text-white col-12">Boton Activo 1</a>
-                </div>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="card">
-                <div class="card-body">
-                    <div class="card-header color-bluecat-op text-white">
-                        <h5 class="text-center align-center">Tarjeta 2</h5>
+                    <div class="card-body">
+                        <div class="card-header color-bluecat-op text-white">
+                            <h5 class="text-center align-center">Tarjeta 2</h5>
+                        </div>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio commodi quas impedit vitae eaque reprehenderit eius ut et.</p>
+                        <a href="#" class="btn btn-info text-white col-12">Boton Activo 2</a>
                     </div>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio commodi quas impedit vitae eaque reprehenderit eius ut et.</p>
-                    <a href="#" class="btn btn-info text-white col-12">Boton Activo 2</a>
-                </div>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="card">
-                <div class="card-body">
-                    <div class="card-header color-bluecat-op text-white">
-                        <h5 class="text-center align-center">Tarjeta 3</h5>
+                    <div class="card-body">
+                        <div class="card-header color-bluecat-op text-white">
+                            <h5 class="text-center align-center">Tarjeta 3</h5>
+                        </div>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio commodi quas impedit vitae eaque reprehenderit eius ut et.</p>
+                        <a href="#" class="btn btn-info text-white col-12">Boton Activo 3</a>
                     </div>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio commodi quas impedit vitae eaque reprehenderit eius ut et.</p>
-                    <a href="#" class="btn btn-info text-white col-12">Boton Activo 3</a>
-                </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<?php
+include(footer); ?>

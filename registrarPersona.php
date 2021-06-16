@@ -1,26 +1,20 @@
-
-
-<?php 
+<?php
 
 include('config/config.php');
 include(header);
-
+include("models/PersonaModel.php");
 
 ?>
 
 <div class="container">
   <div class="d-flex align-items-center p-3 my-3 text-white rounded shadow-sm color-bluecat">
-
     <div class="col d-flex align-items-center">
-
       <img class="me-3" src="<?php echo img ?>princicon.png" alt="" width="48" height="48">
       <div class="lh-1">
         <h1 class="h5 mb-0 text-white lh-1 animate__animated animate__headShake">Ministerios y Tramites</h1>
         <h6 class="animate__animated animate__headShake">Gobierno de Catamarca</h6>
       </div>
-
     </div>
-
   </div>
 </div>
 
@@ -32,15 +26,14 @@ include(header);
         <p class="lead">Completa el siguiente formulario con tus datos</p>
       </div>
 
-
       <div id="register-row" class="row justify-content-center align-items-center col-sm-10 col-md-8 text-dark">
-        
-        <form action="" method="post" class="needs-validation" novalidate>
-         
-        <div class="row g-3">
+
+        <form action="" class="needs-validation" novalidate method="post">
+
+          <div class="row g-3 pt-5">
             <div class="col-sm-6">
-              <label for="nombre" name="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" placeholder="" value="" required>
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" required>
               <div class="invalid-feedback">
                 Campo obligatorio
               </div>
@@ -48,16 +41,16 @@ include(header);
 
             <div class="col-sm-6">
               <label for="apellido" class="form-label">Apellido</label>
-              <input type="text" class="form-control" id="apellido" placeholder="" value="" required>
+              <input type="text" name="apellido" class="form-control" id="apellido" placeholder="" required>
               <div class="invalid-feedback">
                 Campo obligatorio
               </div>
             </div>
 
             <div class="col-12">
-              <label for="username" class="form-label">DNI</label>
+              <label for="dni" class="form-label">DNI</label>
               <div class="input-group has-validation">
-                <input type="text" class="form-control" id="username" placeholder="Ingresa tu DNI" required>
+                <input type="text" name="dni" class="form-control" id="username" placeholder="Ingresa tu DNI" required>
                 <div class="invalid-feedback">
                   Campo obligatorio
                 </div>
@@ -66,7 +59,7 @@ include(header);
 
             <div class="col-12">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="tu@ejemplo.com" required>
+              <input type="email" name="email" class="form-control" id="email" placeholder="tu@ejemplo.com" required>
               <div class="invalid-feedback">
                 Ingrese un email valido
               </div>
@@ -74,15 +67,15 @@ include(header);
 
             <div class="col-12">
               <label for="date" class="form-label">Fecha de nacimiento</label>
-              <input type="date" class="form-control" id="date" min="1900-01-01" required>
+              <input type="date" class="form-control" name="nacimiento" min="1900-01-01" required>
               <div class="invalid-feedback">
                 Campo obligatorio
               </div>
             </div>
 
             <div class="col-12">
-              <label for="phone" class="form-label">Télefono</label>
-              <input type="tel" class="form-control" id="phone">
+              <label for="tel" class="form-label">Télefono</label>
+              <input type="tel" name="telefono" class="form-control">
               <small>Ejemplo: 3834 858585</small>
               <div class="invalid-feedback">
                 Campo obligatorio
@@ -91,7 +84,7 @@ include(header);
 
             <div class="col-md-4">
               <label for="pais" class="form-label">Nacionalidad</label>
-              <select class="form-select" id="pais" required>
+              <select class="form-select" id="pais" name="nacionalidad" required>
                 <option value="">Choose...</option>
                 <option value="AF">Afganistán</option>
                 <option value="AL">Albania</option>
@@ -327,16 +320,16 @@ include(header);
                 <option value="YU">Yugoslavia</option>
                 <option value="ZM">Zambia</option>
                 <option value="ZW">Zimbabue</option>
-
               </select>
+
               <div class="invalid-feedback">
-                Selecciona un pais
+                Selecciona un país
               </div>
             </div>
 
             <div class="col-md-4">
               <label for="number" class="form-label">Latitud</label>
-              <input type="number" class="form-control" id="latitud" placeholder="" required>
+              <input type="number" class="form-control" name="latitud" placeholder="" required>
 
               <div class="invalid-feedback">
                 Dato obligatorio
@@ -345,13 +338,12 @@ include(header);
 
             <div class="col-md-4">
               <label for="number" class="form-label">Longitud</label>
-              <input type="number" class="form-control" id="zip" placeholder="" required>
+              <input type="number" class="form-control" name="longitud" placeholder="" required>
               <div class="invalid-feedback">
                 Dato obligatorio
               </div>
             </div>
           </div>
-
 
           <hr class="my-4">
 
@@ -367,17 +359,16 @@ include(header);
               <label class="form-check-label" for="masculino">Masculino</label>
             </div>
           </div>
-
           <hr class="my-4">
-
-          <button class="w-100 btn btn-info btn-lg" type="submit">Registrarme</button>
+          <button class="w-100 btn btn-info btn-lg" type="submit" name="submit">Registrarme</button>
         </form>
+        <?php
+        (isset($_POST['submit'])) && Guardar() ?>
       </div>
   </div>
 </div>
-
 <?php
-
 include(footer);
-
+$con = null;
+$query = null;
 ?>
