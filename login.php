@@ -1,5 +1,18 @@
 
-<?php $ministerio="Ministerio de educación"; ?>
+<?php 
+
+    include('config/config.php');
+    $ministerio="Ministerio de educación"; 
+    include(header);
+
+    if(isset($_GET['minis'])){
+        echo $_GET['minis'];
+        $ministerio = $_GET['minis'];
+    } else {
+        echo 'No hay GET';
+    }
+
+?>
 
     <div class="container">
 
@@ -32,7 +45,7 @@
                 <div class="login-form">
                     <form action="/examples/actions/confirmation.php" method="post">
                         
-                        <h2 class="text-center">MINISTERIO</h2>	
+                        <h2 class="text-center"><?php echo $ministerio ?></h2>	
                         <div class="form-group">
                             <input type="number" class="form-control p-1" placeholder="DNI" required="required">
                             
@@ -126,4 +139,8 @@
     </div>
     
 -->
+<?php
 
+include(footer);
+
+?>

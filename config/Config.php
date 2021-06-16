@@ -6,9 +6,9 @@
     define('PASSWORD_DB','');
 
 
-	define('footer','views/layout/footer.php');
-    define('header','views/layout/header.php');
-    define('links','views/layout/links.php');
+	define('footer','vistas/footer.php');
+    define('header','vistas/header.php');
+    define('links','vistas/links.php');
     define('img','assets/img/');
     define('css','assets/css/style.css');
     define('cssCustom','assets/css/custom.css');
