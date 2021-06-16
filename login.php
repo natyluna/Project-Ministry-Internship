@@ -57,7 +57,7 @@
                         
                         <p class="text-center"><a href="#">Olvidaste tu Contraseña?</a></p>     
                     </form>
-                    <p class="text-center small">No tenes Clave? <a href="#">Registrate</a></p>
+                    <p class="text-center small">No tenes Clave? <a href="register.php">Registrate</a></p>
 
                     <?php
                     

@@ -1,16 +1,27 @@
 
-<div class="d-flex align-items-center p-3 my-3 text-white rounded shadow-sm color-bluecat">
 
-  <div class="col d-flex align-items-center">
+<?php 
 
-    <img class="me-3" src="<?php echo img ?>princicon.png" alt="" width="48" height="48">
-    <div class="lh-1">
-      <h1 class="h5 mb-0 text-white lh-1 animate__animated animate__headShake">Ministerios y Tramites</h1>
-      <h6 class="animate__animated animate__headShake">Gobierno de Catamarca</h6>
+include('config/config.php');
+include(header);
+
+
+?>
+
+<div class="container">
+  <div class="d-flex align-items-center p-3 my-3 text-white rounded shadow-sm color-bluecat">
+
+    <div class="col d-flex align-items-center">
+
+      <img class="me-3" src="<?php echo img ?>princicon.png" alt="" width="48" height="48">
+      <div class="lh-1">
+        <h1 class="h5 mb-0 text-white lh-1 animate__animated animate__headShake">Ministerios y Tramites</h1>
+        <h6 class="animate__animated animate__headShake">Gobierno de Catamarca</h6>
+      </div>
+
     </div>
 
   </div>
-
 </div>
 
 <div id="register">
@@ -22,7 +33,8 @@
       </div>
 
 
-      <div id="register-row" class="row justify-content-center align-items-center col-sm-10 col-md-8 text-light">
+      <div id="register-row" class="row justify-content-center align-items-center col-sm-10 col-md-8 text-dark">
+        
         <form action="" method="post" class="needs-validation" novalidate>
          
         <div class="row g-3">
@@ -363,3 +375,9 @@
       </div>
   </div>
 </div>
+
+<?php
+
+include(footer);
+
+?>
