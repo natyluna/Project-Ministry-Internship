@@ -42,6 +42,7 @@
 
 
         </div>
+        
 
          <!-- BANNER Y NOTIFICACIONES -->
         <div class="row">
