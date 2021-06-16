@@ -21,7 +21,6 @@ abstract class DataBaseModel{
             echo "ERROR DE CONEXION CON LA BASE DE DATOS!!! : " . $exception->getMessage();
         }
     }
-
     // permite obtener un registro de la tabla elegida según un id
     public function getOne($id){
         $sql = "SELECT * FROM ".$this->table." WHERE id=".$this->id;
