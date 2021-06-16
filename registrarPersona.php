@@ -33,7 +33,7 @@ include("models/PersonaModel.php");
           <div class="row g-3 pt-5">
             <div class="col-sm-6">
               <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" required>
+              <input type="text" class="form-control" name="nombre" id="nombre" value="<?php if(isset($_POST['nombre'])){echo $_POST['nombre']; }?>" placeholder="" required>
               <div class="invalid-feedback">
                 Campo obligatorio
               </div>
@@ -41,7 +41,7 @@ include("models/PersonaModel.php");
 
             <div class="col-sm-6">
               <label for="apellido" class="form-label">Apellido</label>
-              <input type="text" name="apellido" class="form-control" id="apellido" placeholder="" required>
+              <input type="text" name="apellido" class="form-control" id="apellido" value="<?php if(isset($_POST['apellido'])){echo $_POST['apellido']; }?>" placeholder="" required>
               <div class="invalid-feedback">
                 Campo obligatorio
               </div>
@@ -50,7 +50,7 @@ include("models/PersonaModel.php");
             <div class="col-12">
               <label for="dni" class="form-label">DNI</label>
               <div class="input-group has-validation">
-                <input type="text" name="dni" class="form-control" id="username" placeholder="Ingresa tu DNI" required>
+                <input type="text" name="dni" class="form-control" id="username" value="<?php if(isset($_POST['dni'])){echo $_POST['dni']; }?>" placeholder="Ingresa tu DNI" required>
                 <div class="invalid-feedback">
                   Campo obligatorio
                 </div>
@@ -59,7 +59,7 @@ include("models/PersonaModel.php");
 
             <div class="col-12">
               <label for="email" class="form-label">Email</label>
-              <input type="email" name="email" class="form-control" id="email" placeholder="tu@ejemplo.com" required>
+              <input type="email" name="email" value="<?php if(isset($_POST['email'])){echo $_POST['email']; }?>" class="form-control" id="email" placeholder="tu@ejemplo.com" required>
               <div class="invalid-feedback">
                 Ingrese un email valido
               </div>
@@ -67,7 +67,7 @@ include("models/PersonaModel.php");
 
             <div class="col-12">
               <label for="date" class="form-label">Fecha de nacimiento</label>
-              <input type="date" class="form-control" name="nacimiento" min="1900-01-01" required>
+              <input type="date" class="form-control"  name="nacimiento" min="1900-01-01" required>
               <div class="invalid-feedback">
                 Campo obligatorio
               </div>
@@ -75,7 +75,7 @@ include("models/PersonaModel.php");
 
             <div class="col-12">
               <label for="tel" class="form-label">Télefono</label>
-              <input type="tel" name="telefono" class="form-control">
+              <input type="tel" value="<?php if(isset($_POST['telefono'])){echo $_POST['telefono']; }?>" name="telefono" class="form-control">
               <small>Ejemplo: 3834 858585</small>
               <div class="invalid-feedback">
                 Campo obligatorio
@@ -329,7 +329,7 @@ include("models/PersonaModel.php");
 
             <div class="col-md-4">
               <label for="number" class="form-label">Latitud</label>
-              <input type="number" class="form-control" name="latitud" placeholder="" required>
+              <input type="number" value="<?php if(isset($_POST['latitud'])){echo $_POST['latitud']; }?>" class="form-control" name="latitud" placeholder="" required>
 
               <div class="invalid-feedback">
                 Dato obligatorio
@@ -338,7 +338,7 @@ include("models/PersonaModel.php");
 
             <div class="col-md-4">
               <label for="number" class="form-label">Longitud</label>
-              <input type="number" class="form-control" name="longitud" placeholder="" required>
+              <input type="number" value="<?php if(isset($_POST['longitud'])){echo $_POST['longitud']; }?>" class="form-control" name="longitud" placeholder="" required>
               <div class="invalid-feedback">
                 Dato obligatorio
               </div>

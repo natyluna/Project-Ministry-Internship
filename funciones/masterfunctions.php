@@ -18,5 +18,14 @@ function console_log($output, $with_script_tags = true) {
 }
 
 
+function alerta($mensaje,$estado=true){
+      if($estado){
+        echo("<div class='bg-success p-4 mt-4 rounded'> <p class='text-white'>*$mensaje</p> </div>");
+      }else{
+        echo "<div class='bg-danger p-4 mt-4 rounded'> <p class='text-white'>*$mensaje</p> </div>";
+      }
+}
+
+
 
 ?>
