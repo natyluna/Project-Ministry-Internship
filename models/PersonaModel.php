@@ -28,7 +28,7 @@ function Guardar(){
     if(!validaRequerido($longitud)){return alerta("Ingresa un Logitud",false);};
 
 
-    $query = "INSERT INTO u283354621_diag_ministeri.PERSONAS(dni,nombre,apellido,fecha_nac,telefono,correo,nacionalidad,sexo,latitud,longitud) VALUES ('$dni','$nombre','$apellido','$nacimiento','$telefono','$email','$nacionalidad','$sexo','$latitud','$longitud')";
+    $query = "INSERT INTO personas(dni,nombre,apellido,fecha_nac,telefono,correo,nacionalidad,sexo,latitud,longitud) VALUES ('$dni','$nombre','$apellido','$nacimiento','$telefono','$email','$nacionalidad','$sexo','$latitud','$longitud')";
     if ($con->query($query) === true) {
         alerta('DATOS CARGADOS CORRECTAMENTE!!');
         $con = null;

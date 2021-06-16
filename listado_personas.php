@@ -1,4 +1,5 @@
 <?php include('config/config.php');
+include_once('funciones/conexion.php');
 include(header); ?>
 <?php $ministerio = "Ministerio de educación"; ?>
 
@@ -90,6 +91,30 @@ include(header); ?>
 
                 </td>
             </tr>
+
+
+            <tr>
+                    <?php
+                    
+                    $query="SELECT * FROM personas";
+                    $result=mysqli_query($con,$query);
+                    while ($row = mysqli_fetch_array($result)) { ?>
+                <tr>
+                    <th><?php echo $row['dni'] ?></th>
+                    <th><?php echo $row['nombre'] ?></th>
+                    <th><?php echo $row['apellido'] ?></th>
+                    <th><?php echo $row['fecha_nac'] ?></th>
+                    <th><?php echo $row['sexo'] ?></th>
+                    <th><?php echo $row['latitud'] . " / " . $row['longitud'] ?></th>
+                    <td class="text-center">
+                        <!--  <a href="#" class="btn btn-muted"> <i class="far fa-eye"></i></a> -->
+                        <a href="#" class="btn color-bluecat text-white btn-sm"> <i class="far fa-edit"></i> </a>
+                        <a href="#" class="btn btn-danger btn-sm"> <i class="fas fa-times"></i> </a>
+                        <a href="#" class="btn btn-success btn-sm"> <i class="fas fa-check"></i></a>
+
+                    </td>
+                </tr>
+            <?php } ?>
 
 
         </tbody>
