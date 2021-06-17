@@ -1,6 +1,7 @@
 <?php
 
-function Guardar(){
+function Guardar()
+{
     include_once('funciones/conexion.php');
     include_once('funciones/validaciones.php');
     include_once('funciones/masterfunctions.php');
@@ -16,16 +17,44 @@ function Guardar(){
     $longitud = $_POST['longitud'];
     $sexo = $_POST['sexo'];
 
-    if(!validaRequerido($nombre)){return alerta("Ingresa un Nombre",false);};
-    if(!validaRequerido($apellido)){return alerta("Ingresa un Apellido",false);};
-    if(!validaRequerido($dni)){return alerta("Ingresa un DNI",false);};
-    if(!validaRequerido($email)){return alerta("Ingresa un EMAIL",false);};
-    if(!validaEmail($email)){return alerta("Ingresa un EMAIL Valido",false);};
-    if(!validaRequerido($nacimiento)){return alerta("Ingresa una Fecha de Nacimiento",false);};
-    if(!validaRequerido($telefono)){return alerta("Ingresa un Telefono",false);};
-    if(!validaRequerido($nacionalidad)){return alerta("Ingresa una Nacionalidad",false);};
-    if(!validaRequerido($latitud)){return alerta("Ingresa una Latitud",false);};
-    if(!validaRequerido($longitud)){return alerta("Ingresa un Logitud",false);};
+    if (!validaRequerido($nombre)) {
+        return alerta("Campo nombre vacio, ingrese el nombre", false);
+    };
+    if (!soloLetras($nombre)) {
+        return alerta("El nombre solo permite letras, ingrese un nombre valido", false);
+    };
+    if (!validaRequerido($apellido)) {
+        return alerta("Campo apellido vacio, ingrese el apellido", false);
+    };
+    if (!soloLetras($apellido)) {
+        return alerta("El apellido solo permite letras, ingrese un apellido valido", false);
+    };
+    if (!validaRequerido($dni)) {
+        return alerta("Campo DNI vacio, ingrese el DNI", false);
+    };
+    if (!validarCant($dni, 7)) {
+        return alerta("El DNI permite minimo 7 digitos, ingrese un DNI valido", false);
+    };
+    if (!validaRequerido($email)) {
+        return alerta("Campo email vacio, ingrese un email", false);
+    };
+    if (!validaEmail($email)) {
+        return alerta("El email debe incluir un @, ingrese un email valido", false);
+    };
+    if (!validaRequerido($nacimiento)) {
+        return alerta("Ingrese la Fecha de Nacimiento", false);
+    };
+    if (!validaRequerido($telefono)) {
+        return alerta("Campo telefono vacio, ingrese un telefono", false);
+    };
+    if (!validarCant($telefono, 10)) {
+        return alerta("El  telefono requiere minimo 10 digitos, ingrese un telefono valido", false);
+    };
+    if (!validaRequerido($nacionalidad)) {
+        return alerta("Seleccione una Nacionalidad", false);
+    };
+
+
 
 
     $query = "INSERT INTO personas(dni,nombre,apellido,fecha_nac,telefono,correo,nacionalidad,sexo,latitud,longitud) VALUES ('$dni','$nombre','$apellido','$nacimiento','$telefono','$email','$nacionalidad','$sexo','$latitud','$longitud')";
@@ -33,7 +62,7 @@ function Guardar(){
         alerta('DATOS CARGADOS CORRECTAMENTE!!');
         $con = null;
     } else {
-        die("<div class='bg-danger p-4 mt-4 rounded'> <p class='text-white'>*error al cargar los datos" . $con->error."</p> </div>");
+        die("<div class='bg-danger p-4 mt-4 rounded'> <p class='text-white'>*error al cargar los datos" . $con->error . "</p> </div>");
         $con = null;
     }
 }

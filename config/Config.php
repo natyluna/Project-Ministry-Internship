@@ -1,6 +1,7 @@
 <?php
     //DATA BASE
-    define('SERVIDOR_DB','127.0.0.1:3307');
+
+    define('SERVIDOR_DB','127.0.0.1');
     define('NOMBRE_DB','diag_ministerios');
     define('USUARIO_DB','root');
     define('PASSWORD_DB','admin');
@@ -13,7 +14,6 @@
     define('css','assets/css/style.css');
     define('cssCustom','assets/css/custom.css');
 
+
 ?>
-
-
 
