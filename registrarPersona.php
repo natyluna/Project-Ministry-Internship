@@ -31,8 +31,9 @@ include("models/PersonaModel.php");
         <form action="" class="needs-validation" novalidate method="post">
 
           <div class="row g-3 pt-5">
+          <small>(*) Campos obligatorios</small>
             <div class="col-sm-6">
-              <label for="nombre" class="form-label">Nombre</label>
+              <label for="nombre" class="form-label">Nombre (*)</label>
               <input type="text" class="form-control" name="nombre" id="nombre" value="<?php if(isset($_POST['nombre'])){echo $_POST['nombre']; }?>" placeholder="" required>
               <div class="invalid-feedback">
                 Campo obligatorio
@@ -40,7 +41,7 @@ include("models/PersonaModel.php");
             </div>
 
             <div class="col-sm-6">
-              <label for="apellido" class="form-label">Apellido</label>
+              <label for="apellido" class="form-label">Apellido (*)</label>
               <input type="text" name="apellido" class="form-control" id="apellido" value="<?php if(isset($_POST['apellido'])){echo $_POST['apellido']; }?>" placeholder="" required>
               <div class="invalid-feedback">
                 Campo obligatorio
@@ -48,7 +49,7 @@ include("models/PersonaModel.php");
             </div>
 
             <div class="col-12">
-              <label for="dni" class="form-label">DNI</label>
+              <label for="dni" class="form-label">DNI (*)</label>
               <div class="input-group has-validation">
                 <input type="text" name="dni" class="form-control" id="username" value="<?php if(isset($_POST['dni'])){echo $_POST['dni']; }?>" placeholder="Ingresa tu DNI" required>
                 <div class="invalid-feedback">
@@ -58,7 +59,7 @@ include("models/PersonaModel.php");
             </div>
 
             <div class="col-12">
-              <label for="email" class="form-label">Email</label>
+              <label for="email" class="form-label">Email (*)</label>
               <input type="email" name="email" value="<?php if(isset($_POST['email'])){echo $_POST['email']; }?>" class="form-control" id="email" placeholder="tu@ejemplo.com" required>
               <div class="invalid-feedback">
                 Ingrese un email valido
@@ -66,7 +67,7 @@ include("models/PersonaModel.php");
             </div>
 
             <div class="col-12">
-              <label for="date" class="form-label">Fecha de nacimiento</label>
+              <label for="date" class="form-label">Fecha de nacimiento (*)</label>
               <input type="date" class="form-control"  name="nacimiento" min="1900-01-01" required>
               <div class="invalid-feedback">
                 Campo obligatorio
@@ -74,7 +75,7 @@ include("models/PersonaModel.php");
             </div>
 
             <div class="col-12">
-              <label for="tel" class="form-label">Télefono</label>
+              <label for="tel" class="form-label">Télefono (*)</label>
               <input type="tel" value="<?php if(isset($_POST['telefono'])){echo $_POST['telefono']; }?>" name="telefono" class="form-control">
               <small>Ejemplo: 3834 858585</small>
               <div class="invalid-feedback">
@@ -83,7 +84,7 @@ include("models/PersonaModel.php");
             </div>
 
             <div class="col-md-4">
-              <label for="pais" class="form-label">Nacionalidad</label>
+              <label for="pais" class="form-label">Nacionalidad (*)</label>
               <select class="form-select" id="pais" name="nacionalidad" required>
                 <option value="">Choose...</option>
                 <option value="AF">Afganistán</option>
@@ -347,7 +348,7 @@ include("models/PersonaModel.php");
 
           <hr class="my-4">
 
-          <h4 class="mb-3">Sexo</h4>
+          <h4 class="mb-3">Sexo (*)</h4>
 
           <div class="my-3">
             <div class="form-check">
