@@ -1,7 +1,17 @@
-<?php include('config/config.php');
-include_once("models/PersonaModel.php");
-$personas = MostrarPersonas();
-include(header); ?>
+<?php 
+
+
+include_once('config/config.php');
+
+
+include("models/PersonaModel.php");
+$personas = MostrarPersonas($con);
+
+include(header);
+
+
+?>
+
 <?php $ministerio = "Ministerio de educación"; ?>
 
 <div class="container">
@@ -69,7 +79,7 @@ include(header); ?>
 
                     <td class="text-center">
                         <!--  <a href="#" class="btn btn-muted"> <i class="far fa-eye"></i></a> -->
-                        <a href="#" class="btn color-bluecat text-white btn-sm"> <i class="far fa-edit"></i> </a>
+                        <a href="editarPersona.php?nombre=<?php echo $persona['nombre'] ?>&apellido=<?php echo $persona['apellido'] ?>&dni=<?php echo $persona['dni'] ?>" class="btn color-bluecat text-white btn-sm"> <i class="far fa-edit"></i> </a>
                         <a href="#" class="btn btn-danger btn-sm"> <i class="fas fa-times"></i> </a>
                         <a href="#" class="btn btn-success btn-sm"> <i class="fas fa-check"></i></a>
 

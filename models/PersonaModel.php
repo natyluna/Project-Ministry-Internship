@@ -1,11 +1,12 @@
 <?php
 
-function MostrarPersonas()
-{
-    include_once('funciones/conexion.php');
 
+
+function MostrarPersonas($cone)
+{
+    
     try {
-        $query = $con->prepare("SELECT * FROM personas");
+        $query = $cone->prepare("SELECT * FROM personas limit 10000");
         $query->execute();
         $datos = $query->fetchAll();
         return $datos;
@@ -14,12 +15,8 @@ function MostrarPersonas()
     }
 }
 
-function Guardar()
+function Guardar($cone)
 {
-    include_once('funciones/conexion.php');
-    include_once('funciones/validaciones.php');
-    include_once('funciones/masterfunctions.php');
-
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $dni = $_POST['dni'];
@@ -71,7 +68,7 @@ function Guardar()
 
     try {
         $sql = "INSERT INTO personas(dni,nombre,apellido,fecha_nac,telefono,correo,nacionalidad,sexo,latitud,longitud) VALUES ('$dni','$nombre','$apellido','$nacimiento','$telefono','$email','$nacionalidad','$sexo','$latitud','$longitud')";
-        $con->exec($sql);
+        $cone->exec($sql);
         alerta('DATOS CARGADOS CORRECTAMENTE!!');
     } catch (PDOException $e) {
         alerta("ERROR AL CARGAR LOS DATOS!!: $e", false);
