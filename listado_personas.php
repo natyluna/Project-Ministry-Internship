@@ -2,8 +2,11 @@
 
 
 include_once('config/config.php');
-include_once("models/PersonaModel.php");
-$personas = MostrarPersonas();
+
+
+include("models/PersonaModel.php");
+$personas = MostrarPersonas($con);
+
 include(header);
 
 

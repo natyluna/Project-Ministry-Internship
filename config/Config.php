@@ -14,6 +14,9 @@
     define('css','assets/css/style.css');
     define('cssCustom','assets/css/custom.css');
 
-
+    include_once('funciones/conexion.php');
+    include_once('funciones/validaciones.php');
+    include_once('funciones/masterfunctions.php');
+    
 ?>
 
