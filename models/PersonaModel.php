@@ -1,5 +1,19 @@
 <?php
 
+function MostrarPersonas()
+{
+    include_once('funciones/conexion.php');
+
+    try {
+        $query = $con->prepare("SELECT * FROM personas");
+        $query->execute();
+        $datos = $query->fetchAll();
+        return $datos;
+    } catch (PDOException $e) {
+        alerta("ERROR AL MOSTRAR LOS DATOS: $e");
+    }
+}
+
 function Guardar()
 {
     include_once('funciones/conexion.php');
@@ -54,15 +68,11 @@ function Guardar()
         return alerta("Seleccione una Nacionalidad", false);
     };
 
-
-
-
-    $query = "INSERT INTO personas(dni,nombre,apellido,fecha_nac,telefono,correo,nacionalidad,sexo,latitud,longitud) VALUES ('$dni','$nombre','$apellido','$nacimiento','$telefono','$email','$nacionalidad','$sexo','$latitud','$longitud')";
-    if ($con->query($query) === true) {
+    try {
+        $sql = "INSERT INTO personas(dni,nombre,apellido,fecha_nac,telefono,correo,nacionalidad,sexo,latitud,longitud) VALUES ('$dni','$nombre','$apellido','$nacimiento','$telefono','$email','$nacionalidad','$sexo','$latitud','$longitud')";
+        $con->exec($sql);
         alerta('DATOS CARGADOS CORRECTAMENTE!!');
-        $con = null;
-    } else {
-        die("<div class='bg-danger p-4 mt-4 rounded'> <p class='text-white'>*error al cargar los datos" . $con->error . "</p> </div>");
-        $con = null;
+    } catch (PDOException $e) {
+        alerta("ERROR AL CARGAR LOS DATOS!!: $e", false);
     }
 }

@@ -1,5 +1,6 @@
 <?php include('config/config.php');
-include_once('funciones/conexion.php');
+include_once("models/PersonaModel.php");
+$personas = MostrarPersonas();
 include(header); ?>
 <?php $ministerio = "Ministerio de educación"; ?>
 
@@ -20,10 +21,6 @@ include(header); ?>
     </div>
 
 </div>
-
-
-
-
 <div class="container p-4">
     <div class="table-wrapper">
         <div class="table-title">
@@ -35,12 +32,8 @@ include(header); ?>
                 <div class="col-sm-4 ">
                     <form action="" class="form-buscar float-end ">
                         <input type="text" placeholder="">
-                        <input type="button" value="Buscar" class="btn color-bluecat text-white" >
-
-
+                        <input type="button" value="Buscar" class="btn color-bluecat text-white">
                     </form>
-
-
 
                 </div>
             </div>
@@ -55,57 +48,25 @@ include(header); ?>
                 <th>Apellido</th>
                 <th>Fecha Nac.</th>
                 <th>Sexo</th>
-                <th>Domicilio</th>
+                <th>Latitud</th>
+                <th>Longitud</th>
                 <th>Acciones</th>
             </tr>
         </thead>
-
         <tbody>
             <tr>
-                <th>40123456</th>
-                <td>Juan</td>
-                <td>Perez</td>
-                <td>10/10/1997</td>
-                <td>Masculino</td>
-                <td>Maipu 680</td>
-                <td class="text-center">
-                    <!--  <a href="#" class="btn btn-muted"> <i class="far fa-eye"></i></a> -->
-                    <a href="#" class="btn color-bluecat text-white btn-sm"> <i class="far fa-edit"></i> </a>
-                    <a href="#" class="btn btn-danger btn-sm"> <i class="fas fa-times"></i> </a>
-                    <a href="#" class="btn btn-success btn-sm"> <i class="fas fa-check"></i></a>
+                <?php
+              
+                foreach ($personas as $persona) { ?>
 
-                </td>
-            </tr>
-            <tr>
-                <th>41258369</th>
-                <td>Maria</td>
-                <td>Soria</td>
-                <td>20/05/1994</td>
-                <td>Femenino</td>
-                <td>Junin 430</td>
-                <td class="text-center">
-                    <!-- <a href="#" class="btn btn-info"> <i class="far fa-eye"></i></a> -->
-                    <a href="#" class="btn color-bluecat text-white btn-sm"> <i class="far fa-edit"></i> </a>
-                    <a href="#" class="btn btn-danger btn-sm"> <i class="fas fa-times"></i> </a>
-                    <a href="#" class="btn btn-success btn-sm"> <i class="fas fa-check"></i></a>
+                    <th><?php echo $persona['dni'] ?></th>
+                    <th><?php echo $persona['nombre'] ?></th>
+                    <th><?php echo $persona['apellido'] ?></th>
+                    <th><?php echo $persona['fecha_nac'] ?></th>
+                    <th><?php echo $persona['sexo'] ?></th>
+                    <th><?php echo $persona['latitud'] ?></th>
+                    <th><?php echo $persona['longitud'] ?></th>
 
-                </td>
-            </tr>
-
-
-            <tr>
-                    <?php
-                    
-                    $query="SELECT * FROM personas";
-                    $result=mysqli_query($con,$query);
-                    while ($row = mysqli_fetch_array($result)) { ?>
-                <tr>
-                    <th><?php echo $row['dni'] ?></th>
-                    <th><?php echo $row['nombre'] ?></th>
-                    <th><?php echo $row['apellido'] ?></th>
-                    <th><?php echo $row['fecha_nac'] ?></th>
-                    <th><?php echo $row['sexo'] ?></th>
-                    <th><?php echo $row['latitud'] . " / " . $row['longitud'] ?></th>
                     <td class="text-center">
                         <!--  <a href="#" class="btn btn-muted"> <i class="far fa-eye"></i></a> -->
                         <a href="#" class="btn color-bluecat text-white btn-sm"> <i class="far fa-edit"></i> </a>
@@ -113,12 +74,13 @@ include(header); ?>
                         <a href="#" class="btn btn-success btn-sm"> <i class="fas fa-check"></i></a>
 
                     </td>
-                </tr>
-            <?php } ?>
+            </tr>
 
+        <?php  } ?>
 
         </tbody>
     </table>
+    <p class="color-bluecat p-1 d-inline-block  rounded text-white">Personas: <?php echo sizeof($personas)?></p>
 </div>
 
 <?php include_once(footer); ?>
