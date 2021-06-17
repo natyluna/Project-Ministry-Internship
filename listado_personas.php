@@ -1,7 +1,14 @@
-<?php include('config/config.php');
+<?php 
+
+
+include_once('config/config.php');
 include_once("models/PersonaModel.php");
 $personas = MostrarPersonas();
-include(header); ?>
+include(header);
+
+
+?>
+
 <?php $ministerio = "Ministerio de educación"; ?>
 
 <div class="container">

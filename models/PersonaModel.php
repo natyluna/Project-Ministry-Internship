@@ -1,8 +1,10 @@
 <?php
 
+requiere_once('funciones/conexion.php');
+
 function MostrarPersonas()
 {
-    include_once('funciones/conexion.php');
+    
 
     try {
         $query = $con->prepare("SELECT * FROM personas");
@@ -16,7 +18,7 @@ function MostrarPersonas()
 
 function Guardar()
 {
-    include_once('funciones/conexion.php');
+    
     include_once('funciones/validaciones.php');
     include_once('funciones/masterfunctions.php');
 
