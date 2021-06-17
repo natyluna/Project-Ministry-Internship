@@ -5,7 +5,6 @@
     define('USUARIO_DB','u283354621_juan');
     define('PASSWORD_DB','Lospibes1234');
 
-
 	define('footer','vistas/footer.php');
     define('header','vistas/header.php');
     define('links','vistas/links.php');
