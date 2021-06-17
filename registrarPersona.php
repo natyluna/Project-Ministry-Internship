@@ -352,11 +352,11 @@ include("models/PersonaModel.php");
 
           <div class="my-3">
             <div class="form-check">
-              <input id="femenino" name="sexo" type="radio" class="form-check-input" checked required>
+              <input id="femenino" name="sexo" type="radio" class="form-check-input" value="femenino" checked required>
               <label class="form-check-label" for="femenino">Femenino</label>
             </div>
             <div class="form-check">
-              <input id="masculino" name="sexo" type="radio" class="form-check-input" required>
+              <input id="masculino" name="sexo" type="radio" class="form-check-input" value="masculino" required>
               <label class="form-check-label" for="masculino">Masculino</label>
             </div>
           </div>

@@ -56,6 +56,7 @@ function Guardar()
 
 
 
+
     $query = "INSERT INTO personas(dni,nombre,apellido,fecha_nac,telefono,correo,nacionalidad,sexo,latitud,longitud) VALUES ('$dni','$nombre','$apellido','$nacimiento','$telefono','$email','$nacionalidad','$sexo','$latitud','$longitud')";
     if ($con->query($query) === true) {
         alerta('DATOS CARGADOS CORRECTAMENTE!!');
