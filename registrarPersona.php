@@ -68,7 +68,7 @@ include("models/PersonaModel.php");
 
             <div class="col-12">
               <label for="date" class="form-label">Fecha de nacimiento (*)</label>
-              <input type="date" class="form-control"  name="nacimiento" min="1900-01-01" required>
+              <input type="date" class="form-control" value="<?php if(isset($_POST['nacimiento'])){echo $_POST['nacimiento']; }?>" name="nacimiento" min="1900-01-01" required>
               <div class="invalid-feedback">
                 Campo obligatorio
               </div>
