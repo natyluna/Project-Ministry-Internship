@@ -79,7 +79,7 @@ include(header);
 
                     <td class="text-center">
                         <!--  <a href="#" class="btn btn-muted"> <i class="far fa-eye"></i></a> -->
-                        <a href="#" class="btn color-bluecat text-white btn-sm"> <i class="far fa-edit"></i> </a>
+                        <a href="editarPersona.php?nombre=<?php echo $persona['nombre'] ?>&apellido=<?php echo $persona['apellido'] ?>&dni=<?php echo $persona['dni'] ?>" class="btn color-bluecat text-white btn-sm"> <i class="far fa-edit"></i> </a>
                         <a href="#" class="btn btn-danger btn-sm"> <i class="fas fa-times"></i> </a>
                         <a href="#" class="btn btn-success btn-sm"> <i class="fas fa-check"></i></a>
 
