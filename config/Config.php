@@ -4,7 +4,7 @@
     define('SERVIDOR_DB','127.0.0.1');
     define('NOMBRE_DB','diag_ministerios');
     define('USUARIO_DB','root');
-    define('PASSWORD_DB','1234');
+    define('PASSWORD_DB','admin');
 
 
 	define('footer','vistas/footer.php');

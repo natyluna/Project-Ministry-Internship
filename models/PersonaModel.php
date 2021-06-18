@@ -75,6 +75,12 @@ function Guardar($cone)
     if (!validaRequerido($nacionalidad)) {
         return alerta("Seleccione una Nacionalidad", false);
     };
+    if (!validaRequerido($latitud)) {
+        return alerta("Seleccione una Latitud", false);
+    };
+    if (!validaRequerido($longitud)) {
+        return alerta("Seleccione una Longitud", false);
+    };
 
     try {
         $sql = "INSERT INTO personas(dni,nombre,apellido,fecha_nac,telefono,correo,nacionalidad,sexo,latitud,longitud) VALUES ('$dni','$nombre','$apellido','$nacimiento','$telefono','$email','$nacionalidad','$sexo','$latitud','$longitud')";
