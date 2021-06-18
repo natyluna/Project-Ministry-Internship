@@ -5,7 +5,7 @@ const controlesMapa = document.querySelector('.map-controllers')
 EventListener();
 
 function EventListener(){
-    btnMap && btnMap.addEventListener('click',seleccionarUbicacion);
+     btnMap && btnMap.addEventListener('click',seleccionarUbicacion);
 
 }
 
