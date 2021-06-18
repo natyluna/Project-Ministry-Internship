@@ -22,8 +22,8 @@ include("models/PersonaModel.php");
   <div class="container">
     <main>
       <div class="py-5 text-center">
-        <h2>Registro de Personas</h2>
-        <p class="lead">Completa el siguiente formulario con tus datos</p>
+        <h2 class="font-weight-bold">Edicion de Personas</h2>
+        <p class="lead">Modifica los datos de la persona</p>
       </div>
 
       <div id="register-row" class="row justify-content-center align-items-center col-sm-10 col-md-8 text-dark">
@@ -31,12 +31,10 @@ include("models/PersonaModel.php");
         <form action="" class="needs-validation" novalidate method="post">
 
           <div class="row g-3 pt-5">
-            <small>(<strong class="text-danger h-1">*</strong>) Campos obligatorios</small>
+          <small>(<strong class="text-danger h-1">*</strong>) Campos obligatorios</small>
             <div class="col-sm-6">
               <label for="nombre" class="form-label">Nombre <strong class="text-danger h-1">*</strong></label>
-              <input type="text" class="form-control" name="nombre" id="nombre" value="<?php if (isset($_POST['nombre'])) {
-                                                                                          echo $_POST['nombre'];
-                                                                                        } ?>" placeholder="" required>
+              <input type="text" class="form-control" name="nombre" id="nombre" value="<?php if(isset($_GET['nombre'])){echo $_GET['nombre']; }?>" placeholder="" required>
               <div class="invalid-feedback">
                 Campo obligatorio
               </div>
@@ -44,9 +42,7 @@ include("models/PersonaModel.php");
 
             <div class="col-sm-6">
               <label for="apellido" class="form-label">Apellido <strong class="text-danger h-1">*</strong></label>
-              <input type="text" name="apellido" class="form-control" id="apellido" value="<?php if (isset($_POST['apellido'])) {
-                                                                                              echo $_POST['apellido'];
-                                                                                            } ?>" placeholder="" required>
+              <input type="text" name="apellido" class="form-control" id="apellido" value="<?php if(isset($_GET['apellido'])){echo $_GET['apellido']; }?>" placeholder="" required>
               <div class="invalid-feedback">
                 Campo obligatorio
               </div>
@@ -55,9 +51,7 @@ include("models/PersonaModel.php");
             <div class="col-12">
               <label for="dni" class="form-label">DNI <strong class="text-danger h-1">*</strong></label>
               <div class="input-group has-validation">
-                <input type="text" name="dni" class="form-control" id="username" value="<?php if (isset($_POST['dni'])) {
-                                                                                          echo $_POST['dni'];
-                                                                                        } ?>" placeholder="Ingresa tu DNI" required>
+                <input type="text" name="dni" class="form-control" id="username" value="<?php if(isset($_GET['dni'])){echo $_GET['dni']; }?>" placeholder="Ingresa tu DNI" required>
                 <div class="invalid-feedback">
                   Campo obligatorio
                 </div>
@@ -66,9 +60,7 @@ include("models/PersonaModel.php");
 
             <div class="col-12">
               <label for="email" class="form-label">Email <strong class="text-danger h-1">*</strong></label>
-              <input type="email" name="email" value="<?php if (isset($_POST['email'])) {
-                                                        echo $_POST['email'];
-                                                      } ?>" class="form-control" id="email" placeholder="tu@ejemplo.com" required>
+              <input type="email" name="email" value="<?php if(isset($_GET['email'])){echo $_GET['email']; }?>" class="form-control" id="email" placeholder="tu@ejemplo.com" required>
               <div class="invalid-feedback">
                 Ingrese un email valido
               </div>
@@ -76,9 +68,7 @@ include("models/PersonaModel.php");
 
             <div class="col-12">
               <label for="date" class="form-label">Fecha de nacimiento <strong class="text-danger h-1">*</strong></label>
-              <input type="date" class="form-control" value="<?php if (isset($_POST['nacimiento'])) {
-                                                                echo $_POST['nacimiento'];
-                                                              } ?>" name="nacimiento" min="1900-01-01" required>
+              <input type="date" class="form-control" value="<?php if(isset($_GET['nacimiento'])){echo $_GET['nacimiento']; }?>" name="nacimiento" min="1900-01-01" required>
               <div class="invalid-feedback">
                 Campo obligatorio
               </div>
@@ -86,9 +76,7 @@ include("models/PersonaModel.php");
 
             <div class="col-12">
               <label for="tel" class="form-label">Télefono <strong class="text-danger h-1">*</strong></label>
-              <input type="tel" value="<?php if (isset($_POST['telefono'])) {
-                                          echo $_POST['telefono'];
-                                        } ?>" name="telefono" class="form-control">
+              <input type="tel" value="<?php if(isset($_GET['telefono'])){echo $_GET['telefono']; }?>" name="telefono" class="form-control">
               <small>Ejemplo: 3834 858585</small>
               <div class="invalid-feedback">
                 Campo obligatorio
@@ -340,28 +328,21 @@ include("models/PersonaModel.php");
               </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-4">
               <label for="number" class="form-label">Latitud</label>
-              <input type="number" value="<?php if (isset($_POST['latitud'])) {
-                                            echo $_POST['latitud'];
-                                          } ?>" class="form-control" name="latitud" placeholder="" required>
+              <input type="number" value="<?php if(isset($_GET['latitud'])){echo $_GET['latitud']; }?>" class="form-control" name="latitud" placeholder="" required>
 
               <div class="invalid-feedback">
                 Dato obligatorio
               </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-4">
               <label for="number" class="form-label">Longitud</label>
-              <input type="number" value="<?php if (isset($_POST['longitud'])) {
-                                            echo $_POST['longitud'];
-                                          } ?>" class="form-control" name="longitud" placeholder="" required>
+              <input type="number" value="<?php if(isset($_GET['longitud'])){echo $_GET['longitud']; }?>" class="form-control" name="longitud" placeholder="" required>
               <div class="invalid-feedback">
                 Dato obligatorio
               </div>
-            </div>
-            <div class="col-md-2 d-flex align-items-end">
-              <i class="  btn btn-danger  fas fa-map-marker-alt" style="font-size: 24px" id='verMap'></i>
             </div>
           </div>
 
@@ -380,32 +361,23 @@ include("models/PersonaModel.php");
             </div>
           </div>
           <hr class="my-4">
-          <button class="w-100 btn btn-info btn-lg text-white" type="submit" name="submit">Registrarme</button>
-        </form>
-
-        <?php
-        (isset($_POST['submit'])) && Guardar($con) ?>
-        <!-- mapa -->
-        <div class="hide" id="window-notice">
           <div class="row">
-            <div class="col-12 mt-5">
-              <div class="rounded" id="map">
-
-              </div>
+            <div class="col">
+              <a class="w-100 btn btn-danger btn-lg text-white" href="listado_personas.php">Cancelar</a>
             </div>
-            <div class="col-12">
-              <div class="container map-controllers d-flex justify-content-center pt-2 ">
-
-              </div>
+            <div class="col">
+              <button class="w-100 btn btn-success btn-lg text-white" type="submit" name="submit">Guardar</button>
             </div>
           </div>
-
-        </div><!-- /mapa -->
+          
+          
+        </form>
+        <?php
+        (isset($_POST['submit'])) && Guardar($con) ?>
       </div>
   </div>
 </div>
 <br>
-<script src="assets/js/map.js" type="module"></script>
 <?php
 include(footer);
 $con = null;
