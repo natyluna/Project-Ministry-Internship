@@ -35,10 +35,7 @@ include(header);
                         <input type="text" placeholder="">
                         <input type="button" value="Buscar" class="btn color-bluecat text-white">
 
-
                     </form>
-
-
 
                 </div>
             </div>
@@ -61,15 +58,22 @@ include(header);
                 <th>40123456</th>
                 <td>Juan</td>
                 <td>Perez</td>
-                <td>Empleado <a href="#" class="btn btn-danger btn-sm"> <i class="fas fa-times"></i> </a></td>
+                <td>Empleado <a href="#" class="btn btn-danger btn-sm " style="font-size:7px;"> <i class="fas fa-times"></i> </a></td>
                 <td>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-5 pe-0">
+                        <select class="form-select " id="roles" required>
 
-                    <select class="form-select" id="roles" required>
-                        <option value="">Administrador</option>
-                        <option value="">Empleado</option>
-                        <option value="">Usuario</option>
-                        <option value="">Funcionario</option>
-                    </select>
+                            <option value="">Administrador</option>
+                            <option value="">Empleado</option>
+                            <option value="">Usuario</option>
+                            <option value="">Funcionario</option>
+                        </select>
+                    </div>
+                    <div class="col-4 d-flex justify-content-start ">
+                       <input class="btn btn-success text-white fw-bold " type="button" value="+">
+                    </div>
+                    </div>
 
                 </td>
 
@@ -79,19 +83,26 @@ include(header);
                 <th>41258369</th>
                 <td>Maria</td>
                 <td>Soria</td>
-                <td>Administrador <a href="#" class="btn btn-danger btn-sm"> <i class="fas fa-times"></i> </a></td>
+                <td>Administrador <a href="#" class="btn btn-danger btn-sm "  style="font-size:7px;"> <i class="fas fa-times"></i> </a></td>
 
                 <td>
 
+                    <div class="row d-flex justify-content-center">
+                    <div class="col-5 pe-0">
+                        <select class="form-select " id="roles" required>
 
+                            <option value="">Administrador</option>
+                            <option value="">Empleado</option>
+                            <option value="">Usuario</option>
+                            <option value="">Funcionario</option>
+                        </select>
+                    </div>
+                    <div class="col-4 d-flex justify-content-start ">
+                       <input class="btn btn-success  text-white fw-bold" type="button" value="+">
+                    </div>
+                    </div>
+                    
 
-                    <select class="form-select" id="roles" required>
-
-                        <option value="">Administrador</option>
-                        <option value="">Empleado</option>
-                        <option value="">Usuario</option>
-                        <option value="">Funcionario</option>
-                    </select>
 
 
 
