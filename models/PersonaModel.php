@@ -1,12 +1,22 @@
 <?php
 
-
-
 function MostrarPersonas($cone)
 {
     
     try {
         $query = $cone->prepare("SELECT * FROM personas limit 10000");
+        $query->execute();
+        $datos = $query->fetchAll();
+        return $datos;
+    } catch (PDOException $e) {
+        alerta("ERROR AL MOSTRAR LOS DATOS: $e");
+    }
+}
+
+function BuscarPersonas($cone,$busk)
+{
+    try {
+        $query = $cone->prepare("SELECT * FROM personas WHERE nombre LIKE '%$busk%' OR apellido LIKE '%$busk%' OR dni LIKE '%$busk%'");
         $query->execute();
         $datos = $query->fetchAll();
         return $datos;
@@ -64,6 +74,12 @@ function Guardar($cone)
     };
     if (!validaRequerido($nacionalidad)) {
         return alerta("Seleccione una Nacionalidad", false);
+    };
+    if (!validaRequerido($latitud)) {
+        return alerta("Seleccione una Latitud", false);
+    };
+    if (!validaRequerido($longitud)) {
+        return alerta("Seleccione una Longitud", false);
     };
 
     try {

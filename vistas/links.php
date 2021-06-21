@@ -20,8 +20,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-<!-- SweetAlert -->
+<!-- MAPA -->
+<script src="https://d19vzq90twjlae.cloudfront.net/leaflet/v0.7.7/leaflet-src.js"></script>
 
-<script src="jquery-3.3.1.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<link href="https://d19vzq90twjlae.cloudfront.net/leaflet/v0.7.7/leaflet.css" rel='stylesheet' />
