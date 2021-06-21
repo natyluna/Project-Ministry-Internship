@@ -373,7 +373,7 @@ include("models/PersonaModel.php");
           
         </form>
         <?php
-        (isset($_POST['submit'])) && Guardar($con) ?>
+        (isset($_POST['submit'])) && Modificar($con) ?>
       </div>
   </div>
 </div>
