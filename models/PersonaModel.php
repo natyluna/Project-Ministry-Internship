@@ -4,7 +4,7 @@ function MostrarPersonas($cone)
 {
     
     try {
-        $query = $cone->prepare("SELECT * FROM personas limit 10000");
+        $query = $cone->prepare("SELECT * FROM personas where estado =1 limit 10000");
         $query->execute();
         $datos = $query->fetchAll();
         return $datos;
@@ -24,6 +24,23 @@ function BuscarPersonas($cone,$busk)
         alerta("ERROR AL MOSTRAR LOS DATOS: $e");
     }
 }
+
+function EliminarPersonas($cone){
+    try {
+        //code...
+        $dni= $_GET['dni'];
+        $sql= "UPDATE personas set estado= 0 where dni= $dni ";
+        $query= $cone ->prepare($sql);
+        $query->execute();
+
+        alerta("Eliminado con exito dni numero: $dni");
+    } catch (PDOException $e) {
+        
+        alerta("error al eliminar datos:$e ", false);
+    }
+   
+}
+
 
 function Guardar($cone)
 {
@@ -83,7 +100,7 @@ function Guardar($cone)
     };
 
     try {
-        $sql = "INSERT INTO personas(dni,nombre,apellido,fecha_nac,telefono,correo,nacionalidad,sexo,latitud,longitud) VALUES ('$dni','$nombre','$apellido','$nacimiento','$telefono','$email','$nacionalidad','$sexo','$latitud','$longitud')";
+        $sql = "INSERT INTO personas(dni,nombre,apellido,fecha_nac,telefono,correo,nacionalidad,sexo,latitud,longitud, estado) VALUES ('$dni','$nombre','$apellido','$nacimiento','$telefono','$email','$nacionalidad','$sexo','$latitud','$longitud', true)";
         $cone->exec($sql);
         alerta('DATOS CARGADOS CORRECTAMENTE!!');
     } catch (PDOException $e) {

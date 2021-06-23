@@ -108,13 +108,17 @@ include(header);
                     <td class="text-center">
                         <!--  <a href="#" class="btn btn-muted"> <i class="far fa-eye"></i></a> -->
                         <a href="editarPersona.php?nombre=<?php echo $persona['nombre'] ?>&apellido=<?php echo $persona['apellido'] ?>&dni=<?php echo $persona['dni'] ?>" class="btn color-bluecat text-white btn-sm"> <i class="far fa-edit"></i> </a>
-                        <a href="#" class="btn btn-danger btn-sm"> <i class="fas fa-times"></i> </a>
+                        <a href="listado_personas.php?dni=<?php echo $persona['dni']?>" class="btn btn-danger btn-sm"> <i class="fas fa-times"></i> </a>
                         <a href="#" class="btn btn-success btn-sm"> <i class="fas fa-user-circle"></i> Perfil</a>
 
                     </td>
             </tr>
 
-        <?php  } ?>
+        <?php  } if(isset($_GET['dni'])){
+            EliminarPersonas($con);
+        }
+        
+        ?>
 
         </tbody>
     </table>
